@@ -1,2 +1,2 @@
 #!/bin/bash
-cmhod -reference=olleh hello
+cmhod --reference=olleh hello
