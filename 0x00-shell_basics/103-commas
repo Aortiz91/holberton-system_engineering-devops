@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -F -m -a
+ls -mpa
+
