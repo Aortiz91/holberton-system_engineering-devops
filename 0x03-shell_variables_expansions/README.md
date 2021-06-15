@@ -11,3 +11,4 @@ This is the Project 209
 9. Used / to divide two variables
 10. Used ** to calculate a Variable eleated to another Variable
 11. Used 2# to transformate a Variable to Decimal
+12. Used printf to display combination of lowcase letters using {}{}. \n to make one output per line, and grep with a pipe to skip oo
