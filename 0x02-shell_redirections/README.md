@@ -14,4 +14,6 @@
 13. List files removing all duplicate names so we will have only uniques files.
 14. Used grep to find a specific word in a file.
 15. Used grep and -c to display the number of lines that contain the pattern bin in the file.
-Display lines with Root and used -A to indicate additional lines to be displayed after the match
+16. Display lines with Root and used -A to indicate additional lines to be displayed after the match.
+17. Displayed all lines excluding a pattern with -v
+18. Displayed only lines starting with letters using [[:alpha]]
