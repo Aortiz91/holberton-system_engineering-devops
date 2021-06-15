@@ -20,3 +20,4 @@
 19. Used tr to change A to c and Z to e. No additional characters were needed.
 20. Removed C and c characters by using tr -d and indicated characters to remove within ''.
 21. Used rev to reverse input
+16. Listed users and directories with pipe sort and removed characters from 1 to 6 which were not user or directories.
