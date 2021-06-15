@@ -18,3 +18,4 @@
 17. Displayed all lines excluding a pattern with -v
 18. Displayed only lines starting with letters using [[:alpha]]
 19. Used tr to change A to c and Z to e. No additional characters were needed.
+Removed C and c characters by using tr -d and indicated characters to remove within ''.
