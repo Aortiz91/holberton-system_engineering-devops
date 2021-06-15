@@ -17,3 +17,4 @@
 16. Display lines with Root and used -A to indicate additional lines to be displayed after the match.
 17. Displayed all lines excluding a pattern with -v
 18. Displayed only lines starting with letters using [[:alpha]]
+19. Used tr to change A to c and Z to e. No additional characters were needed.
