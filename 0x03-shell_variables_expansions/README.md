@@ -1,8 +1,11 @@
 This is the Project 209
-1. Created a new alias named Ls that excecute rm in all files
-2. Used $USER print the current user
-3. Added /action to PATH using export command
-4. Used tr and wc to list and count directories in PATH
-5. Used printenv to display all environment variables
-6. Used set to display all local variables
-Used export to create a global variable named HOLBERTON with value Betty
+0. Created a new alias named Ls that excecute rm in all files
+1. Used $USER print the current user
+2. Added /action to PATH using export command
+3. Used tr and wc to list and count directories in PATH
+4. Used printenv to display all environment variables
+5. Used set to display all local variables
+6. Created a local variable named BETTY
+7. Used export to create a global variable named HOLBERTON with value Betty
+8. Used arithmetic with variables
+9.
