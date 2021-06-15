@@ -13,3 +13,4 @@ This is the Project 209
 11. Used 2# to transformate a Variable to Decimal
 12. Used printf to display combination of lowcase letters using {}{}. Argument s is used to print combinations as strings,  \n to make one output per line, and grep -v after a pipe to skip combination "oo"
 13. 
+Used printf to print the Variable  in two decimals. The 'f' specifies the format of floating number and the '0.2' indicates the number will have two decimals.
