@@ -5,7 +5,9 @@ This is the Project 209
 3. Used tr and wc to list and count directories in PATH
 4. Used printenv to display all environment variables
 5. Used set to display all local variables
-6. Created a local variable named BETTY
+6. Created a loval variable named BETTY
 7. Used export to create a global variable named HOLBERTON with value Betty
 8. Used arithmetic with variables
-9.
+9. Used / to divide two variables
+10. Used ** to calculate a Variable eleated to another Variable
+11. Used 2# to transformate a Variable to Decimal
