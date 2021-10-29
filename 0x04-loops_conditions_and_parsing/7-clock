@@ -3,17 +3,15 @@
 # -displays bad luck for the 4th loop iteration
 # -displays good luck for the 8th loop iteration
 # -displays Best School for the other iterations
-x=1
-while [ $x -le 10 ]
+hour=0
+while [ $hour -le 12 ]
 do
-	if [ $x -eq 4 ]
-	then
-		echo "bad luck"
-	elif [ $x -eq 8 ]
-	then
-		echo "good luck"
-	else
-		echo "Best School"
-	fi
-	x=$(( x + 1 ))
+	echo "Hour: $hour"
+	minute=1
+	while [ $minute -le 59 ]
+	do
+		echo $minute
+		minute=$(( minute + 1 ))
+	done
+	hour=$((hour + 1))
 done
