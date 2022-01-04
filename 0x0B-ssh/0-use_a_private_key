@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh 'ubuntu'@'35.227.74.85'
+ssh 3283-web-01
