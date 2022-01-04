@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #Bash script that uses ssh to connect to a server 
-ssh 3283-web-01
+# ssh 3283-web-01
+ssh -i ~/.ssh/school ubuntu@35.227.74.85
