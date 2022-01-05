@@ -8,8 +8,8 @@ file_line { 'IdentityFile':
 }
 
 file_line { 'PasswordAuthentication':
-  ensure = present,
-  path  => '/etc/ssh/ssh_config',
-  match => '^PasswordAuthentication',
-  line  => 'PasswordAuthentication no',
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  match  => '^PasswordAuthentication',
+  line   => 'PasswordAuthentication no',
 }
