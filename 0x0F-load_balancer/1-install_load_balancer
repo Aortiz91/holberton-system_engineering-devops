@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# load balancer
+
+sudo apt-get update
+sudo apt-get -y install haproxy
+sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+file=/etc/haproxy/haproxy.cfg
+
+sudo cp $file $file.copy
+
+sudo sed -i -e '$a\listen appname 0.0.0.0:80\n\tmode http\n\tstats enable' $file
+sudo sed -i -e '$a\\tbalance roundrobin\n\toption httpclose\n\toption forwardfor' $file
+sudo sed -i -e '$a\\tserver 3283-web-01 35.237.144.234:80\n\tserver 3283-web-02 34.139.38.95:80' $file
+
+sudo service haproxy start
