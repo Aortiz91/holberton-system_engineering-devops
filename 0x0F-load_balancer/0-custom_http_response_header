@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configuring web server
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo sed -i '11i\add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
+sudo service nginx start
