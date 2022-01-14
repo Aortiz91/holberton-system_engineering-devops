@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 # configuring web server
-
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo sed -i '11i\add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
-
-mkdir -p /var/www/html
-touch /var/www/html/index.html
-echo "Holberton School" > /var/www/html/index.html
-touch /var/www/html/404.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-
-
-
+sudo apt -y update
+sudo apt -y install nginx
+sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
+sudo sed -i '/location /a \    add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+sudo service nginx restart
