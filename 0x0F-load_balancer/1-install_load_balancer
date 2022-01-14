@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # load balancer
-sudo apt update
-sudo apt upgrade
-sudo apt install haproxy
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install haproxy -y
 sudo sed -i "$ aENABLED=1" /etc/default/haproxy
 sudo service haproxy start
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup1401
