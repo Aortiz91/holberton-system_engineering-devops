@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+if (($# == 1)); then
+	eval "sudo -u $1 whoami"
+fi
