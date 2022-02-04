@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-    Python script that returns information using a REST API
+""" Python script that returns information using a REST API
 """
 
 
