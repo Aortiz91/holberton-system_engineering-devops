@@ -3,7 +3,6 @@
 
 
 if __name__ == "__main__":
-    """Python script that returns information using a REST API"""
     import requests
     import sys
 
@@ -19,7 +18,8 @@ if __name__ == "__main__":
     total = 0
     completed = 0
     tasks = []
-    
+    name = reqNameJSON.get('name')
+
     for elem in (reqTodosJSON):
         if ((elem['completed']) is True):
             completed += 1
@@ -29,7 +29,7 @@ if __name__ == "__main__":
             total += 1
     
     print('Employee {} is done with tasks ({}/{}):'.format(
-          (reqNameJSON).get('name'), completed, total))
+          name, completed, total))
     
     for t in tasks:
         print(f"\t{t}")
