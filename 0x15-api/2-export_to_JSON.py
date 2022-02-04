@@ -29,9 +29,9 @@ if __name__ == "__main__":
         dictTask = {}
         dictTask["task"] = elem2["title"]
         if ((elem2["completed"]) is True):
-            dictTask["completed"] = "true"
+            dictTask["completed"] = True
         else:
-            dictTask["completed"] = "false"
+            dictTask["completed"] = False
         dictTask["username"] = reqName.json().get("username")
         newList.append(dictTask)
     newDict[sys.argv[1]] = newList
