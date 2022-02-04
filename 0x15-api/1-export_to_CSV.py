@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Python script that gets API info and exports it to CSV """
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
 
@@ -28,7 +28,7 @@ if __name__ == "__main__":
             f.write("\"")
             f.write(str(elem2["userId"]))
             f.write("\",\"")
-            f.write(str(name))
+            f.write(str(reqName.json().get("username")))
             f.write("\",\"")
             f.write(str(elem2["completed"]))
             f.write("\",\"")
