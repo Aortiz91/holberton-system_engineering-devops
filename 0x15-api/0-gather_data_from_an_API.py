@@ -17,10 +17,10 @@ if __name__ == "__main__":
 
     reqName = requests.get(urlName)
     reqTodos = requests.get(urlTodos)
-    
+
     reqNameJSON = reqName.json()
     reqTodosJSON = reqTodos.json()
-    
+
     total = 0
     completed = 0
     tasks = []
