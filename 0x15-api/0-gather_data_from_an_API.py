@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""Python script that returns information using a REST API"""
-# IDK
+"""
+Python script that returns information using a REST API
+"""
 
 if __name__ == "__main__":
+    """
+    script
+    """
     import requests
     import sys
 
@@ -29,9 +33,7 @@ if __name__ == "__main__":
             tasks.append(elem['title'])
         else:
             total += 1
-    
     print('Employee {} is done with tasks ({}/{}):'.format(
           name, completed, total))
-    
     for t in tasks:
         print(f"\t{t}")
