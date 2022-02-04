@@ -21,4 +21,4 @@ if __name__ == "__main__":
             total += 1
     print("Employee {} is done with tasks({}/{}):".format(name, comp, total))
     for t in tasks:
-        print("\t{}". format(t))
+        print("\t {}". format(t))
