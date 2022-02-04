@@ -8,9 +8,11 @@ if __name__ == "__main__":
 
     url = 'https://jsonplaceholder.typicode.com/users/'
     empId = sys.argv[1]
-    
-    reqName = requests.get(url + empId)
-    reqTodos = requests.get(url + empId + '/todos/')
+    urlName = url + empId
+    urlTodos = url + empId + '/todos/'
+
+    reqName = requests.get(urlName)
+    reqTodos = requests.get(urlTodos)
     
     reqNameJSON = reqName.json()
     reqTodosJSON = reqTodos.json()
