@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-Python script that returns information using a REST API
-"""
+""" Python script that returns information using a REST API """
+import requests
+import sys
 
 if __name__ == "__main__":
-    import requests
-    import sys
 
     url = "https://jsonplaceholder.typicode.com/users/"
     reqName = requests.get(url + sys.argv[1])
