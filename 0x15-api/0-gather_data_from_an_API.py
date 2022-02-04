@@ -1,32 +1,34 @@
 #!/usr/bin/python3
-"""Python script that returns information using a REST API"""
+"""API DATA TO PRINT"""
 
 
-if __name__ == "__main__":
-    """Python script that returns information using a REST API"""
+if __name__ == '__main__':
     import requests
-    import sys
+    from sys import argv
 
-    url = 'https://jsonplaceholder.typicode.com/users/'
-    empId = sys.argv[1]
-    
-    reqName = requests.get(url + empId)
-    reqTodos = requests.get(url + empId + '/todos/')
-    
-    total = 0
-    completed = 0
-    tasks = []
-    
-    for elem in (reqTodos.json()):
-        if ((elem['completed']) is True):
-            completed += 1
-            total += 1
-            tasks.append(elem['title'])
-        else:
-            total += 1
-    
-    print('Employee {} is done with tasks ({}/{}):'.format(
-          (reqName.json()).get('name'), completed, total))
-    
-    for t in tasks:
-        print(f"\t{t}")
+    todos = 'https://jsonplaceholder.typicode.com/todos'
+    users = 'https://jsonplaceholder.typicode.com/users'
+
+    response1 = requests.get(todos)
+    response2 = requests.get(users)
+
+    users_json = response2.json()
+    todos_json = response1.json()
+
+    name = users_json[int(argv[1]) - 1]['name']
+
+    donetask = 0
+    tasks = 0
+    dosome = []
+    uid = int(argv[1])
+    for tmp in todos_json:
+        if tmp['userId'] == uid:
+            if tmp['completed'] is True:
+                donetask = donetask + 1
+                dosome.append(tmp['title'])
+            tasks = tasks + 1
+
+    print('Employee {} is done with tasks({}/{}):'.format(
+        name, donetask, tasks))
+    for TASK_TITLE in dosome:
+        print('\t {}'.format(TASK_TITLE))
