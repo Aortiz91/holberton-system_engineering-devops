@@ -8,17 +8,17 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users/"
     reqName = requests.get(url + sys.argv[1])
     reqTodos = requests.get(url + sys.argv[1] + "/todos/")
+    name = reqName.json().get("name")
     total = 0
-    completed = 0
+    comp = 0
     tasks = []
     for elem in (reqTodos.json()):
         if ((elem["completed"]) is True):
-            completed += 1
+            comp += 1
             total += 1
             tasks.append(elem["title"])
         else:
             total += 1
-    print("Employee {} is done with tasks ({}/{}):".format(
-          reqName.json().get("name"), completed, total))
+    print("Employee {} is done with tasks ({}/{}):".format(name, comp, total))
     for t in tasks:
         print(f"\t{t}")
