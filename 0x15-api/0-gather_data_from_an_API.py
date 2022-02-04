@@ -2,7 +2,7 @@
 """Python script that returns information using a REST API"""
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     import requests
     import sys
 
