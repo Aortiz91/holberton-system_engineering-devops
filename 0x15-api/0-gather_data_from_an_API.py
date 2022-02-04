@@ -4,9 +4,6 @@ Python script that returns information using a REST API
 """
 
 if __name__ == "__main__":
-    """
-    script
-    """
     import requests
     import sys
 
@@ -20,11 +17,11 @@ if __name__ == "__main__":
 
     reqNameJSON = reqName.json()
     reqTodosJSON = reqTodos.json()
+    name = reqNameJSON.get("name")
 
     total = 0
     completed = 0
     tasks = []
-    name = reqNameJSON.get("name")
 
     for elem in (reqTodosJSON):
         if ((elem["completed"]) is True):
