@@ -19,6 +19,6 @@ if __name__ == "__main__":
             tasks.append(elem["title"])
         else:
             total += 1
-    print("Employee {} is done with tasks ({}/{}):".format(name, comp, total))
+    print("Employee {} is done with tasks({}/{}):".format(name, comp, total))
     for t in tasks:
         print("\t{}". format(t))
