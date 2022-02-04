@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
     Python script that returns information using a REST API
- """
+"""
 
 
 if __name__ == "__main__":
