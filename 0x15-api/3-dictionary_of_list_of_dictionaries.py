@@ -9,10 +9,10 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users/"
     reqAllTodos = requests.get("https://jsonplaceholder.typicode.com/users/")
     uid = 1
-    newList = []
+    newDict = {}
     while (uid <= len(reqAllTodos.json())):
         reqUIDTodos = requests.get(url + str(uid) + "/todos/")
-        newDict = {}
+        newList = []
         for elem2 in (reqUIDTodos.json()):
             dictTask = {}
             dictTask["username"] = (
@@ -23,8 +23,7 @@ if __name__ == "__main__":
             else:
                 dictTask["completed"] = False
             newList.append(dictTask)
-            print(newList)
-        newDict[uid] = newList
+            newDict[uid] = newList
         uid += 1
     with open("todo_all_employees.json", "w") as f:
         f.write(json.dumps(newDict))
