@@ -15,13 +15,13 @@ if __name__ == "__main__":
         newDict = {}
         for elem2 in (reqUIDTodos.json()):
             dictTask = {}
+            dictTask["username"] = (
+                     requests.get(url + str(uid))).json().get("username")
             dictTask["task"] = elem2["title"]
             if ((elem2["completed"]) is True):
                 dictTask["completed"] = True
             else:
                 dictTask["completed"] = False
-            dictTask["username"] = (
-                    requests.get(url + str(uid))).json().get("username")
             newList.append(dictTask)
             print(newList)
         newDict[uid] = newList
